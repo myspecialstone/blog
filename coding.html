@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>건호의 프로그래밍 공간</title>
+    <style>
+      h1{
+        text-align:center;
+      }
+      div{
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        font-size: 20px;
+      }
+      div > button{
+        background:rgba(130,208,255,0.7);
+        border:2px solid black;
+        padding:15px 30px;
+        margin-left:5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #list{
+        z-index: 2;
+        background: white;
+        position:fixed;
+        left: 0px;
+        top: 140px;
+        border:1px solid black;
+        padding: 10px;
+      }
+      #button1{
+        position: fixed;
+        left: 100px;
+        top: 170px;
+        width: 400px;
+        height: 270px;
+      }
+      #button1 > img{
+        height: 70%;
+      }
+      #button1 > p{
+        font-size: 25px;
+        margin: 5px 0px;
+      }
+      #button2{
+        position: fixed;
+        left: 600px;
+        top: 170px;
+        width: 400px;
+        height: 270px;
+      }
+      #button2 > img{
+        height: 70%;
+      }
+      #button2 > p{
+        font-size: 25px;
+        margin: 5px 0px;
+      }
+      #button3{
+        position: fixed;
+        left: 100px;
+        top: 500px;
+        width: 400px;
+        height: 270px;
+      }
+      #button3 > img{
+        height: 70%;
+      }
+      #button3 > p{
+        font-size: 25px;
+        margin: 5px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 onclick="location.href= 'index.html';"> 건호의 프로그래밍 공간 </h1>
+    <script>
+    function select(){
+      if (document.querySelector('#list').style.display==='none'){
+        document.querySelector('#list').style.display = 'block';
+      } else {
+        document.querySelector('#list').style.display = 'none';
+      }
+    }
+    window.resizeTo(1280,800);
+    </script>
+    <div>
+      <button onclick="select();">언어</button>
+      <button onclick="location.href =  'coding.html';">코딩</button>
+      <button onclick="location.href =  'reading.html';">독서</button>
+      <button onclick="location.href =  'saying.html';">명언</button>
+      <button onclick="location.href =  'memory.html';">추억</button>
+    </div>
+    <div id='list'; style='display:none';>
+      <li><a href="html.html">html</a></li>
+      <li><a href="css.html">css</a></li>
+      <li><a href="javascript.html">javascript</a></li>
+    </div>
+    <button id='button1' onclick="location.href = 'tetris.html';"><img src='tetris.jpg'><p>테트리스</p></button>
+    <button id='button2' onclick="location.href = 'sigma.html';"><img src='sigma.jpg'><p>시그마 제곱 계산기</p></button>
+    <button id='button3' onclick="location.href = 'fucking.html';"><img src='fucking.jpg'><p>공동교육과정</p></button>
+  </body>
+</html>

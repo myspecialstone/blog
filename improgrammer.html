@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>건호의 프로그래밍 공간</title>
+    <style>
+      h1{
+        text-align:center;
+      }
+      #buttons{
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        font-size: 20px;
+      }
+      button{
+        background:rgba(130,208,255,0.7);
+        border:2px solid black;
+        padding:15px 30px;
+        margin-left:5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #list{
+        z-index: 2;
+        background: white;
+        position:fixed;
+        left: 0px;
+        top: 140px;
+        border:1px solid black;
+        padding: 10px;
+      }
+      p{
+        position: absolute;
+        left: 500px;
+        top: 250px;
+        font-size: 25px;
+        width: 50%;
+      }
+      img{
+        width: 400px;
+        position: absolute;
+        left: 20px;
+        top: 160px;
+      }
+      h2{
+        position: absolute;
+        left: 600px;
+        top: 170px;
+        font-size: 35px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 onclick="location.href= 'index.html';"> 건호의 프로그래밍 공간 </h1>
+    <script>
+    function select(){
+      if (document.querySelector('#list').style.display==='none'){
+        document.querySelector('#list').style.display = 'block';
+      } else {
+        document.querySelector('#list').style.display = 'none';
+      }
+    }
+    window.resizeTo(1280,800);
+    </script>
+    <div id='buttons'>
+      <button onclick="select();">언어</button>
+      <button onclick="location.href =  'coding.html';">코딩</button>
+      <button onclick="location.href =  'reading.html';">독서</button>
+      <button onclick="location.href =  'saying.html';">명언</button>
+      <button onclick="location.href =  'memory.html';">추억</button>
+    </div>
+    <div id='list'; style='display:none';>
+      <li><a href="html.html">html</a></li>
+      <li><a href="css.html">css</a></li>
+      <li><a href="javascript.html">javascript</a></li>
+    </div>
+    <img src='improgrammer.jpg'>
+    <div id='content'>
+    <h2> 나는 프로그래머다</h2><br>
+    <p> IT 각 분야에 몸 담고 있는 프로그래머들의 성장기를 담은 책. 프로그래머로 살아가면서 나아갔던 모험들과, 겪었던 어려움들을  알려주어, 프로그래머가 지녀야할 마음가짐과 자세를 배우게 되었음
+      <br><br>
+      책 내용 중 ‘프로그래밍은 단순한 언어의 나열이 아닌, 예술적 창작 과정’이라는 내용이 나오는 데, 이를 읽고 스스로 언어를 배우는 데에만 몰두하여, 그 언어를 실제로 다루어 무언가를 만드는 실력은  크게 성장하지 못했다는 것을 성찰해보게 되었음</p></div>
+  </body>
+</html>

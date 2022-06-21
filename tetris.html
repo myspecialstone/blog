@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>건호의 프로그래밍 공간</title>
+    <style>
+      h1{
+        text-align:center;
+      }
+      div{
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        font-size: 20px;
+      }
+      button{
+        background:rgba(130,208,255,0.7);
+        border:2px solid black;
+        padding:15px 30px;
+        margin-left:5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #list{
+        z-index: 2;
+        background: white;
+        position:fixed;
+        left: 0px;
+        top: 140px;
+        border:1px solid black;
+        padding: 10px;
+      }
+      p{
+        font-size: 20px;
+        width: 95%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 onclick="location.href= 'index.html';"> 건호의 프로그래밍 공간 </h1>
+    <script>
+    function select(){
+      if (document.querySelector('#list').style.display==='none'){
+        document.querySelector('#list').style.display = 'block';
+      } else {
+        document.querySelector('#list').style.display = 'none';
+      }
+    }
+    window.resizeTo(1280,800);
+    </script>
+    <div>
+      <button onclick="select();">언어</button>
+      <button onclick="location.href =  'coding.html';">코딩</button>
+      <button onclick="location.href =  'reading.html';">독서</button>
+      <button onclick="location.href =  'saying.html';">명언</button>
+      <button onclick="location.href =  'memory.html';">추억</button>
+    </div>
+    <div id='list'; style='display:none';>
+      <li><a href="html.html">html</a></li>
+      <li><a href="css.html">css</a></li>
+      <li><a href="javascript.html">javascript</a></li>
+    </div>
+    <h2> 테트리스 </h2>
+    <p> 테트리스입니다. html css javascript로 만든 프로그램입니다. visual studio code 프로그램을 사용하여 만들었구요. 고1때 유튜브를 보며 복사코딩 한 거라 부족한 점이 많습니다. </p>
+    <img src='wide.jpg'>
+    <p> live server라는 확장 프로그램을 사용했구요. 아래에는 html 코드입니다. </p>
+    <img src='tetrisHtml.jpg'>
+    <p> 블록의 좌표값을 찍어낸 것입니다. </p>
+    <img src='xy.jpg'>
+    <img src='fileform.jpg'><br>
+    <a href='style.css' download="style.css" target="_blank"> CSS 코드 </a><br>
+    <a href='blocks.js' download="blocks.js" target="_blank"> 블록 코드 </a><br>
+    <a href='tetris.js' download="tetris.js" target="_blank"> Javascript 코드 </a><br>
+    <a href='index.html' download="index1.html" target="_blank"> html 코드 </a><br>
+    <iframe src='https://www.youtube.com/embed/1lNy2mhvLFk' name='iframe' width="600px" height="400px"></iframe>
+  </body>
+</html>
